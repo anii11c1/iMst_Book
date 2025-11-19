@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: imst-book
+    env: python
+    region: oregon
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn iMst_Book.wsgi:application
+    staticPublishPath: staticfiles
+    autoDeploy: true
+    plan: free
