@@ -7,7 +7,7 @@ from django.contrib.auth.decorators import login_required
 
 def feed (request):
     posts = Post.objects.all ().order_by("-fecha")
-    return render (request, "feed.html",{"posts": posts})
+    return render (request, "index.html",{"posts": posts})
 
 
 #login_required
